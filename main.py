@@ -203,12 +203,20 @@ def download(vid):
     print('\n')
 
 def main():
-    vid_list = [ #在这里填入视频id，是视频url的一部分
-        'danji/2015/11/50099'
-    ]
-    for vid in vid_list:
-        download(vid)
+    if len(sys.argv)>1:
+        vid = sys.argv[1]
+        if None!=re.match('danji/\d{4}/\d{1,2}/\d+',vid):
+            download(vid)
+        else:
+            print('Wrong vid syntax!')
+    else:
+        vid_list = [
+            'danji/2015/11/50099'
+        ]
+        for vid in vid_list:
+            download(vid)
 
 if __name__ == '__main__':
     main()
+
 
