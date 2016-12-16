@@ -203,7 +203,7 @@ def download(vid):
     print('\n')
 
 def main():
-    vid_list = [
+    vid_list = [ #在这里填入视频id，是视频url的一部分
         'danji/2015/11/50099'
     ]
     for vid in vid_list:
@@ -212,9 +212,3 @@ def main():
 if __name__ == '__main__':
     main()
 
-'''
-1.支持参数传入
-2.支持合成后自动转码
-3.支持自动复制mp4到服务器资源文件夹
-4.支持自动截图
-'''
